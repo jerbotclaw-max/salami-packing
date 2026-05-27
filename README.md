@@ -140,4 +140,4 @@ Contains:
 
 ---
 
-*JC Dream Applied Mathematics Division — Group Chat ID: 6d6bdee8cb4c4febab32866fef26a547*
+*JC Dream Applied Mathematics Division*
