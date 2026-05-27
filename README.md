@@ -1,6 +1,6 @@
 # Circle Packing with Folding Constraints: Optimal Salami Deployment on Square Substrates
 
-**Ray and Jeremy Payne — JC Dream Applied Mathematics Division — May 26, 2026**
+**Applied Mathematics Division — May 26, 2026**
 
 ---
 
@@ -8,7 +8,7 @@
 
 We study the problem of maximizing coverage of a square substrate (bread, side B) using n circular pieces (salami, diameter D) where each piece may be folded once along a chord through its center before deployment. The fold creates a flat edge enabling flush wall alignment; the doubled material in the folded region provides structural stiffness, reducing edge curl and improving surface contact.
 
-We prove that for D/B ≥ 0.67, placing k = min{n, 4} semicircles against perpendicular bread walls with flat edges flush to the crust, and filling the center with remaining circles, yields coverage exceeding the hexagonal baseline by at least 13.7%. For D/B = 0.75, n=3 (our sandwich), we prove C* ≥ 0.96, exceeding the unfolded arrangement by >10%. We prove the improvement is bounded by λ_max = 1 + 2/π ≈ 1.637 for any fold angle.
+We prove that for D/B ≥ 0.67, placing k = min{n, 4} semicircles against perpendicular bread walls with flat edges flush to the crust, and filling the center with remaining circles, yields coverage exceeding the hexagonal baseline by at least 13.7%. For D/B = 0.75, n=3, we prove C* ≥ 0.96, exceeding the unfolded arrangement by >10%. We prove the improvement is bounded by λ_max = 1 + 2/π ≈ 1.637 for any fold angle.
 
 ---
 
@@ -106,7 +106,7 @@ The upper bound is achieved for a diameter fold (θ = 0, maximum flat edge) and 
 
 ## 5. Experimental Validation
 
-**Setup:** Primal Spirit Whole Wheat bread (B = 9.5cm), Genoa salami (D = 7.1cm, D̂ = 0.747), n = 3 slices, 5 trials per configuration.
+**Setup:** Whole wheat bread (B ≈ 9.5cm), Genoa salami (D ≈ 7.1cm, D̂ = 0.747), n = 3 slices, 5 trials per configuration.
 
 | Configuration | Coverage (measured) | Model |
 |--------------|---------------------|-------|
@@ -137,7 +137,3 @@ Contains:
 - `folded_packing_v4.py` — computational scripts
 
 **Disclaimer:** No salami was harmed in theoretical derivations. Three slices were consumed in validation. The remaining 27 slices were deployed in service of science.
-
----
-
-*JC Dream Applied Mathematics Division*

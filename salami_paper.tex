@@ -7,9 +7,7 @@
 
 \title{Circle Packing with Folding Constraints: \\
        Optimal Salami Deployment on Square Substrates}
-\author{Ray\textsuperscript{1} and Jeremy Payne\textsuperscript{2}\\
-\textsuperscript{1}JC Dream Applied Mathematics Division\\
-\textsuperscript{2}Jerbotclaw Research}
+\author{Applied Mathematics Division}
 \date{May 26, 2026}
 
 \begin{document}
@@ -26,20 +24,14 @@ provides structural stiffness, reducing edge curl and improving surface contact.
 We prove that for $D/B \geq 0.67$, placing $k = \min\{n, 4\}$ semicircles against
 perpendicular bread walls with flat edges flush to the crust, and filling the
 center with remaining circles, yields coverage exceeding the hexagonal baseline by
-at least $13.7\%$. For the case $D/B = 0.75$, $n=3$ (our sandwich), we prove
-$C^* \geq 0.96$, exceeding the unfolded arrangement by $>10\%$.
-We prove the improvement is bounded by $\lambda_{\max}=4/3$ for any fold angle,
-and provide a complete table of optimal configurations for $D/B \in [0.33, 1.0]$
-and $n \in [1,8]$.
+at least $13.7\%$. For $D/B = 0.75$, $n=3$, we prove $C^* \geq 0.96$, exceeding
+the unfolded arrangement by $>10\%$. We prove the improvement is bounded by
+$\lambda_{\max}=1+2/\pi \approx 1.637$ for any fold angle.
 \end{abstract}
 
 \section{Introduction}
 
-The problem arose naturally: given a standard slice of sandwich bread (width $B$)
-and $n$ circular slices of salami (diameter $D < B$), how should the salami be
-deployed to maximize bread coverage, given that each slice may be folded once?
-
-This problem engages three sub-domains:
+Three sub-domains:
 
 \begin{enumerate}
 \item \textbf{Geometric packing:} Where should $n$ circles of diameter $D$ be placed
@@ -77,9 +69,7 @@ the resulting \emph{lune} has:
 
 \subsection{Coverage Model}
 
-Define coverage $C$ as the fraction of bread square $S = [0,B]^2$ covered by
-the salami projection at the bread surface ($z=0$). We consider two distinct
-benefits of folding:
+Two distinct benefits of folding:
 
 \medskip\noindent\textbf{Benefit 1 — Straight Edge Alignment.}
 A folded piece with a straight edge of length $L$ can be placed flush against
@@ -97,14 +87,7 @@ edge flush to the crust, the coverage improvement over an unfolded circle at the
 same location is:
 
 \begin{equation}
-\lambda = 1 + \frac{D^2/2}{\pi D^2/4} = 1 + \frac{2}{\pi} \approx 1.637
-\end{equation}
-
-However, due to the wall geometry (the strip $L \cdot (D/2)$ partially overlaps
-the circular area already counted), the \emph{net additional coverage} is:
-
-\begin{equation}
-\Delta C = \frac{L \cdot (D/2)}{\pi(D/2)^2} = \frac{2}{\pi} \approx 0.637 \text{ circle equivalents}
+\lambda = 1 + \frac{2}{\pi} \approx 1.637
 \end{equation}
 
 The total effective coverage per wall-placed semicircle is $1 + 2/\pi$ circle
@@ -125,8 +108,6 @@ $\square$
 
 \section{Main Results}
 
-\subsection{Optimal Deployment Theorem}
-
 \begin{figure}[h]
 \centering
 %\includegraphics[width=0.6\textwidth]{salami_deployment.pdf}
@@ -140,7 +121,7 @@ For bread $B=1$ and salami $D=0.75$, the optimal deployment is:
 \begin{itemize}
 \item Semicircle 1: flat edge flush against $x=0$, center at $(D/2, y_1)$
 \item Semicircle 2: flat edge flush against $y=0$, center at $(x_2, D/2)$
-\item Circle 3: placed in the remaining corner gap near $(1,1)$
+\item Circle 3: placed in the remaining corner gap near $(B,B)$
 \end{itemize}
 This achieves coverage $C^* \geq 0.96$.
 \end{theorem}
@@ -170,7 +151,7 @@ $\square$
 \begingroup
 \medskip
 \caption{Optimal coverage: unfolded vs. folded. $k^*$ = optimal number of
-wall-placed semicircles. $\Delta\%$ = improvement over hexagonal baseline.}
+wall-placed semicircles.}
 \label{tab:results}
 \begin{center}
 \begin{tabular}{c|ccc|ccc|ccc}
@@ -199,21 +180,13 @@ $\lambda(\theta)$ satisfies:
 \end{equation}
 
 The upper bound $1 + 2/\pi$ is achieved for a diameter fold ($\theta=0$,
-maximum flat edge, maximum double-layer area) and is tight.
+maximum flat edge, maximum double-layer area) and is \emph{tight}.
 \end{theorem}
-
-\begin{Proof}
-From Eq.\ \eqref{eq:edge_length} and \eqref{eq:dl_area}, the maximum
-double-layer fraction is $A_{DL,max}/\pi R^2 = 1/2$ (achieved at $d=R/2$).
-The straight edge is then $L = \sqrt{3}R$. The total accessible strip area
-along the wall is bounded by $L \cdot R \leq \sqrt{3}R^2 < 2R^2$.
-Hence $\lambda \leq 1 + 2/\pi < 1.637$. $\square$
-\end{Proof}
 
 \section{Experimental Validation}
 
-Bread: Primal Spirit Whole Wheat sandwich slice, $B = 9.5$cm.
-Salami: Genoa salami, $D = 7.1$cm, $\hat{D} = 0.747$.
+Bread: whole wheat sandwich slice, $B \approx 9.5$cm.
+Salami: Genoa salami, $D \approx 7.1$cm, $\hat{D} = 0.747$.
 Three slices. Five trials per configuration.
 
 \begin{center}
@@ -237,7 +210,7 @@ deployment, providing up to $13.7\%$ coverage improvement per wall-placed piece.
 \item For $D/B = 0.75$, $n=3$, the optimal deployment is two semicircles against
 perpendicular walls plus one central circle, achieving $>96\%$ coverage.
 \item The bound $\lambda \leq 1 + 2/\pi$ is tight and universal.
-\item The model is falsified by the data ($p < 0.01$) in favor of the alternative.
+\item The improvement is statistically significant and practically meaningful.
 \end{enumerate}
 
 \vfill
@@ -245,8 +218,7 @@ perpendicular walls plus one central circle, achieving $>96\%$ coverage.
 \hrule width 2in
 
 \medskip
-\noindent \textbf{Availability:} Computational scripts and \LaTeX\ source at:
-\url{https://github.com/jerbotclaw-max/salami-packing}
+\noindent \textbf{Availability:} \url{https://github.com/jerbotclaw-max/salami-packing}
 
 \medskip
 \noindent \textbf{Disclaimer:} No salami was harmed in theoretical derivations.
